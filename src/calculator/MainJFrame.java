@@ -292,12 +292,12 @@ public class MainJFrame extends javax.swing.JFrame {
     private void jBtn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn9ActionPerformed
         if (!lastSymbolWasOperator) {
 
-            jTextField1.setText(jTextField1.getText() + "9"); //просто добавляем еще одну "3"
+            jTextField1.setText(jTextField1.getText() + '9'); //просто добавляем еще одну "3"
 
         } else {
 
             jTextField1.setText("");
-            jTextField1.setText(jTextField1.getText() + "9"); //просто добавляем еще одну "3"
+            jTextField1.setText(jTextField1.getText() + '9'); //просто добавляем еще одну "3"
 
         }
         lastSymbolWasOperator = false;
@@ -305,219 +305,84 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void jBtnDivActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnDivActionPerformed
 
-        char op = '/';
-        if (lastSymbolWasOperator) {
-            return;
-        }
-        //проверим если текстовое поле пустое (в самом начале оно пусто)
-        if (jTextField1.getText().length() == 0) {
-            return;
-        }
-        punctflag = false;
-        //если x пустой то кидаем в него значение введеное
-        if (isOperandX == false) {
-            operandX = Double.parseDouble(jTextField1.getText());
-            //теперь у нас есть первое значение
-            isOperandX = true;
-            //установим флаг что был нажат оператор 
-            lastSymbolWasOperator = true;
-            //копируем то что внизу наверх
-            copyValueToTextField2(op);
-            operator = '/';
-            //выходим из метода
-            return;
-
-        } // если первое значение  isOperandX у нас заполенно то мы должны кинуть значение в y
-        else if ((isOperandX) && (!isOperandY)) {
-            operandY = Double.parseDouble(jTextField1.getText());
-            lastSymbolWasOperator = true;
-
-            //копируем то что внизу наверх
-            copyValueToTextField2(op);
-            jTextField1.setText(Double.toString(calc.toCalculate(operator, operandX, operandY)));
-            operandX = calc.toCalculate(operator, operandX, operandY);
-            lastSymbolWasOperator = true;
-            operator = '/';
-        }
-
+       char op='/';
+       toPressOperator(op);
     }//GEN-LAST:event_jBtnDivActionPerformed
 
     private void jBtnDifActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnDifActionPerformed
 
-        char op = '-';
-        if (lastSymbolWasOperator) {
-            return;
-        }
-        //проверим если текстовое поле пустое (в самом начале оно пусто)
-        if (jTextField1.getText().length() == 0) {
-            return;
-        }
-        punctflag = false;
-        //если x пустой то кидаем в него значение введеное
-        if (isOperandX == false) {
-            operandX = Double.parseDouble(jTextField1.getText());
-            //теперь у нас есть первое значение
-            isOperandX = true;
-            //установим флаг что был нажат оператор 
-            lastSymbolWasOperator = true;
-            //копируем то что внизу наверх
-            copyValueToTextField2(op);
-            operator = '-';
-            //выходим из метода
-            return;
-
-        } // если первое значение  isOperandX у нас заполенно то мы должны кинуть значение в y
-        else if ((isOperandX) && (!isOperandY)) {
-            operandY = Double.parseDouble(jTextField1.getText());
-            lastSymbolWasOperator = true;
-
-            //копируем то что внизу наверх
-            copyValueToTextField2(op);
-            jTextField1.setText(Double.toString(calc.toCalculate(operator, operandX, operandY)));
-            operandX = calc.toCalculate(operator, operandX, operandY);
-            lastSymbolWasOperator = true;
-            operator = '-';
-        }
-
-
+      char op='-';
+       toPressOperator(op);
     }//GEN-LAST:event_jBtnDifActionPerformed
 
     private void jBtn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn7ActionPerformed
-        if (!lastSymbolWasOperator) {
-
-            jTextField1.setText(jTextField1.getText() + "7"); //просто добавляем еще одну "3"
-
-        } else {
-
-            jTextField1.setText("");
-            jTextField1.setText(jTextField1.getText() + "7"); //просто добавляем еще одну "3"
-
-        }
-        lastSymbolWasOperator = false;
+        char number='7';
+     toPressNumber(number);
     }//GEN-LAST:event_jBtn7ActionPerformed
 
     private void jBtn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn8ActionPerformed
-        if (!lastSymbolWasOperator) {
-
-            jTextField1.setText(jTextField1.getText() + "8"); //просто добавляем еще одну "3"
-
-        } else {
-
-            jTextField1.setText("");
-            jTextField1.setText(jTextField1.getText() + "8"); //просто добавляем еще одну "3"
-
-        }
-        lastSymbolWasOperator = false;
+       char number='8';
+     toPressNumber(number);
     }//GEN-LAST:event_jBtn8ActionPerformed
 
     private void jBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn4ActionPerformed
-        if (!lastSymbolWasOperator) {
-
-            jTextField1.setText(jTextField1.getText() + "4"); //просто добавляем еще одну "3"
-
-        } else {
-
-            jTextField1.setText("");
-            jTextField1.setText(jTextField1.getText() + "4"); //просто добавляем еще одну "3"
-
-        }
-        lastSymbolWasOperator = false;
+       char number='4';
+     toPressNumber(number);
     }//GEN-LAST:event_jBtn4ActionPerformed
 
     private void jBtn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn5ActionPerformed
-        if (!lastSymbolWasOperator) {
-
-            jTextField1.setText(jTextField1.getText() + "5"); //просто добавляем еще одну "3"
-
-        } else {
-
-            jTextField1.setText("");
-            jTextField1.setText(jTextField1.getText() + "5"); //просто добавляем еще одну "3"
-
-        }
-        lastSymbolWasOperator = false;// TODO add your handling code here:
+        char number='5';
+     toPressNumber(number);
     }//GEN-LAST:event_jBtn5ActionPerformed
 
     private void jBtn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn6ActionPerformed
-        if (!lastSymbolWasOperator) {
-
-            jTextField1.setText(jTextField1.getText() + "6"); //просто добавляем еще одну "3"
-
-        } else {
-
-            jTextField1.setText("");
-            jTextField1.setText(jTextField1.getText() + "6"); //просто добавляем еще одну "3"
-
-        }
-        lastSymbolWasOperator = false;
+        char number='6';
+     toPressNumber(number);
     }//GEN-LAST:event_jBtn6ActionPerformed
 
     private void jBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn1ActionPerformed
-        if (!lastSymbolWasOperator) {
-
-            jTextField1.setText(jTextField1.getText() + "1"); //просто добавляем еще одну "3"
-
-        } else {
-
-            jTextField1.setText("");
-            jTextField1.setText(jTextField1.getText() + "1"); //просто добавляем еще одну "3"
-
-        }
-        lastSymbolWasOperator = false;
+       char number='1';
+     toPressNumber(number);
     }//GEN-LAST:event_jBtn1ActionPerformed
 
     private void jBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn2ActionPerformed
         if (!lastSymbolWasOperator) {
 
-            jTextField1.setText(jTextField1.getText() + "2"); //просто добавляем еще одну "3"
+            jTextField1.setText(jTextField1.getText() + '2'); //просто добавляем еще одну "3"
 
         } else {
 
             jTextField1.setText("");
-            jTextField1.setText(jTextField1.getText() + "2"); //просто добавляем еще одну "3"
+            jTextField1.setText(jTextField1.getText() + '2'); //просто добавляем еще одну "3"
 
         }
         lastSymbolWasOperator = false;
     }//GEN-LAST:event_jBtn2ActionPerformed
 
-    private void jBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn3ActionPerformed
+   void toPressNumber(char number){
 
-        if(operator=='='){
-         jTextField1.setText("");
-         isOperandX=false;
-         isOperandY=false;
-        }
-//        if (start) {
-//            jTextField1.setText("");
-//            start=false;
-//
-//        }
         if (!lastSymbolWasOperator) {
 
-            jTextField1.setText(jTextField1.getText() + "3"); //просто добавляем еще одну "3"
+            jTextField1.setText(jTextField1.getText() + number); //просто добавляем еще одну "3"
 
         } else {
 
             jTextField1.setText("");
-            jTextField1.setText(jTextField1.getText() + "3"); //просто добавляем еще одну "3"
+            jTextField1.setText(jTextField1.getText() + number); //просто добавляем еще одну "3"
 
         }
         lastSymbolWasOperator = false;
+    }
+    
+    private void jBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn3ActionPerformed
+char number='3';
+     toPressNumber(number);
     }//GEN-LAST:event_jBtn3ActionPerformed
 
 
     private void jBtn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn0ActionPerformed
-        if (!lastSymbolWasOperator) {
-
-            jTextField1.setText(jTextField1.getText() + "0"); //просто добавляем еще одну "3"
-
-        } else {
-
-            jTextField1.setText("");
-            jTextField1.setText(jTextField1.getText() + "0"); //просто добавляем еще одну "3"
-
-        }
-        lastSymbolWasOperator = false;
+        char number='0';
+     toPressNumber(number);
     }//GEN-LAST:event_jBtn0ActionPerformed
 
     private void jBtnRezultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnRezultActionPerformed
@@ -613,9 +478,8 @@ public class MainJFrame extends javax.swing.JFrame {
         jTextField2.setText(jTextField2.getText() + jTextField1.getText() + operator);
     }
 
-    private void jBtnPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPlusActionPerformed
-
-        char op = '+';
+  void  toPressOperator(char pressedOperator){
+    char op = pressedOperator;
         if (lastSymbolWasOperator) return;
         if (jTextField1.getText().length() == 0) return;
         punctflag = false;
@@ -626,11 +490,10 @@ public class MainJFrame extends javax.swing.JFrame {
             lastSymbolWasOperator=true;
             isOperandY=false;
             isOperandX=true;
-            operator='+';
+            operator=pressedOperator;
             return;
         }
-
-//если x пустой то кидаем в него значение введеное
+        //если x пустой то кидаем в него значение введеное
         if (isOperandX == false) {
             operandX = Double.parseDouble(jTextField1.getText());
             //теперь у нас есть первое значение
@@ -639,7 +502,7 @@ public class MainJFrame extends javax.swing.JFrame {
             lastSymbolWasOperator = true;
             //копируем то что внизу наверх
             copyValueToTextField2(op);
-            operator = '+';
+            operator = pressedOperator;
             //выходим из метода
 
         } // если первое значение  isOperandX у нас заполенно то мы должны кинуть значение в y
@@ -654,50 +517,19 @@ public class MainJFrame extends javax.swing.JFrame {
             jTextField1.setText(Double.toString(calc.toCalculate(operator, operandX, operandY)));
             operandX = calc.toCalculate(operator, operandX, operandY);
             lastSymbolWasOperator = true;
-            operator = '+';
+            operator = pressedOperator;
         }
 
-
+    }
+    private void jBtnPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPlusActionPerformed
+char op='+';
+       toPressOperator(op);
     }//GEN-LAST:event_jBtnPlusActionPerformed
 
     private void jBtmMultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtmMultActionPerformed
 
-        char op = '*';
-        if (lastSymbolWasOperator) {
-            return;
-        }
-        //проверим если текстовое поле пустое (в самом начале оно пусто)
-        if (jTextField1.getText().length() == 0) {
-            return;
-        }
-        punctflag = false;
-        //если x пустой то кидаем в него значение введеное
-        if (isOperandX == false) {
-            operandX = Double.parseDouble(jTextField1.getText());
-            //теперь у нас есть первое значение
-            isOperandX = true;
-            //установим флаг что был нажат оператор 
-            lastSymbolWasOperator = true;
-            operator = '*';
-            //копируем то что внизу наверх
-            copyValueToTextField2(op);
-
-            //выходим из метода
-            return;
-
-        } // если первое значение  isOperandX у нас заполенно то мы должны кинуть значение в y
-        else if ((isOperandX) && (!isOperandY)) {
-            operandY = Double.parseDouble(jTextField1.getText());
-            lastSymbolWasOperator = true;
-            operator = '*';
-            //копируем то что внизу наверх
-            copyValueToTextField2(op);
-            jTextField1.setText(Double.toString(calc.multiplication(operandX, operandY)));
-            operandX = calc.multiplication(operandX, operandY);
-            lastSymbolWasOperator = true;
-            operator = '*';
-        }
-
+       char op='*';
+       toPressOperator(op);
     }//GEN-LAST:event_jBtmMultActionPerformed
 
     private void jBtnDotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnDotActionPerformed
