@@ -61,6 +61,7 @@ public class MainJFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Калькулятор");
 
+        jBtn6.setBackground(new java.awt.Color(204, 204, 204));
         jBtn6.setText("6");
         jBtn6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,6 +69,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        jBtn3.setBackground(new java.awt.Color(204, 204, 204));
         jBtn3.setText("3");
         jBtn3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,6 +77,8 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        jBtnDiv.setBackground(new java.awt.Color(102, 102, 255));
+        jBtnDiv.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jBtnDiv.setText("/");
         jBtnDiv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,6 +86,8 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        jBtnPlus.setBackground(new java.awt.Color(102, 102, 255));
+        jBtnPlus.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jBtnPlus.setText("+");
         jBtnPlus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,6 +95,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        jBtnDot.setBackground(new java.awt.Color(204, 204, 204));
         jBtnDot.setText(".");
         jBtnDot.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,6 +103,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        jBtn2.setBackground(new java.awt.Color(204, 204, 204));
         jBtn2.setText("2");
         jBtn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,6 +111,8 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        jBtnRezult.setBackground(new java.awt.Color(102, 102, 255));
+        jBtnRezult.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         jBtnRezult.setText("=");
         jBtnRezult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,6 +120,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        jBtn9.setBackground(new java.awt.Color(204, 204, 204));
         jBtn9.setText("9");
         jBtn9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,6 +128,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        jBtn0.setBackground(new java.awt.Color(204, 204, 204));
         jBtn0.setText("0");
         jBtn0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,6 +136,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        jBtn8.setBackground(new java.awt.Color(204, 204, 204));
         jBtn8.setText("8");
         jBtn8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,6 +144,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        jBtn4.setBackground(new java.awt.Color(204, 204, 204));
         jBtn4.setText("4");
         jBtn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,6 +152,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        jBtn5.setBackground(new java.awt.Color(204, 204, 204));
         jBtn5.setText("5");
         jBtn5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,6 +160,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        jBtn1.setBackground(new java.awt.Color(204, 204, 204));
         jBtn1.setText("1");
         jBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,6 +168,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        jBtn7.setBackground(new java.awt.Color(204, 204, 204));
         jBtn7.setText("7");
         jBtn7.setActionCommand("");
         jBtn7.setName("JBtn7"); // NOI18N
@@ -160,7 +177,14 @@ public class MainJFrame extends javax.swing.JFrame {
                 jBtn7ActionPerformed(evt);
             }
         });
+        jBtn7.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jBtn7KeyPressed(evt);
+            }
+        });
 
+        jBtmMult.setBackground(new java.awt.Color(102, 102, 255));
+        jBtmMult.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jBtmMult.setText("*");
         jBtmMult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,6 +192,8 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        jBtnDif.setBackground(new java.awt.Color(102, 102, 255));
+        jBtnDif.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jBtnDif.setText("-");
         jBtnDif.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,6 +205,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField1.setName(""); // NOI18N
 
+        jButton1.setBackground(new java.awt.Color(255, 102, 102));
         jButton1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton1.setText("c");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -200,8 +227,9 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField1)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,10 +257,7 @@ public class MainJFrame extends javax.swing.JFrame {
                                     .addComponent(jBtmMult, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jBtnRezult, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
                                     .addComponent(jBtnDif, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addGap(22, 22, 22))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jTextField2)
-                        .addContainerGap())))
+                        .addGap(22, 22, 22))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -281,7 +306,7 @@ public class MainJFrame extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -290,17 +315,8 @@ public class MainJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBtn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn9ActionPerformed
-        if (!lastSymbolWasOperator) {
-
-            jTextField1.setText(jTextField1.getText() + '9'); //просто добавляем еще одну "3"
-
-        } else {
-
-            jTextField1.setText("");
-            jTextField1.setText(jTextField1.getText() + '9'); //просто добавляем еще одну "3"
-
-        }
-        lastSymbolWasOperator = false;
+        char number='9';
+     toPressNumber(number);
     }//GEN-LAST:event_jBtn9ActionPerformed
 
     private void jBtnDivActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnDivActionPerformed
@@ -346,22 +362,18 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jBtn1ActionPerformed
 
     private void jBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn2ActionPerformed
-        if (!lastSymbolWasOperator) {
-
-            jTextField1.setText(jTextField1.getText() + '2'); //просто добавляем еще одну "3"
-
-        } else {
-
-            jTextField1.setText("");
-            jTextField1.setText(jTextField1.getText() + '2'); //просто добавляем еще одну "3"
-
-        }
-        lastSymbolWasOperator = false;
+        char number='2';
+     toPressNumber(number);
     }//GEN-LAST:event_jBtn2ActionPerformed
 
    void toPressNumber(char number){
-
-        if (!lastSymbolWasOperator) {
+       
+       if((operator=='=')&&(lastSymbolWasOperator)){
+       jTextField1.setText("");
+       jTextField1.setText(jTextField1.getText() + number); //просто добавляем еще одну "3"
+       lastSymbolWasOperator = false;
+       }else
+       if (!lastSymbolWasOperator) {
 
             jTextField1.setText(jTextField1.getText() + number); //просто добавляем еще одну "3"
 
@@ -375,7 +387,7 @@ public class MainJFrame extends javax.swing.JFrame {
     }
     
     private void jBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn3ActionPerformed
-char number='3';
+      char number='3';
      toPressNumber(number);
     }//GEN-LAST:event_jBtn3ActionPerformed
 
@@ -385,39 +397,31 @@ char number='3';
      toPressNumber(number);
     }//GEN-LAST:event_jBtn0ActionPerformed
 
-    private void jBtnRezultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnRezultActionPerformed
-       if(operator=='='){
-           operator = '=';
+    void operationSwitch(char operator){
+    
        
-       return;     
-       }
+    }
+    
+    private void jBtnRezultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnRezultActionPerformed
+       
+        if(!lastSymbolWasOperator){
         if ((isOperandX) && (!isOperandY)) {
             operandY = Double.parseDouble(jTextField1.getText());
 
             jTextField2.setText("");
             jTextField1.setText(Double.toString(calc.toCalculate(operator, operandX, operandY)));
-            operandX = calc.toCalculate(operator, operandX, operandY);
+           // operandX = calc.toCalculate(operator, operandX, operandY);
             operandX=0;
             operandY=0;
-            operator = '=';
             isOperandY=false;
-            isOperandX=true;
+            isOperandX=false;
+            operator = '=';
+           // lastSymbolWasOperator=true;
         }
+        }
+        
 
-//        
-//        jTextField1.setText(Double.toString(calc.toCalculate(operator,operandX, operandY)));
-//        
-//        punctflag = false;//если мы уже поставили точку в числе типа double то второй раз уже поставить нельзя....
-//        operandX = 0.0;
-//        operandY = 0.0;
-//        isOperandX = false;
-//        isOperandY = false;
-//        lastSymbolWasOperator = false;
-//        start=true;
-//    
-//       // jTextField1.setText("");
-//        jTextField2.setText("");
-//        
+
 
     }//GEN-LAST:event_jBtnRezultActionPerformed
 
@@ -480,20 +484,11 @@ char number='3';
 
   void  toPressOperator(char pressedOperator){
     char op = pressedOperator;
-        if (lastSymbolWasOperator) return;
-        if (jTextField1.getText().length() == 0) return;
-        punctflag = false;
+    if(lastSymbolWasOperator)return;
 
-        if (operator == '=') {
-             operandX = Double.parseDouble(jTextField1.getText());
-            jTextField2.setText(jTextField1.getText()+op);
-            lastSymbolWasOperator=true;
-            isOperandY=false;
-            isOperandX=true;
-            operator=pressedOperator;
-            return;
-        }
-        //если x пустой то кидаем в него значение введеное
+    punctflag = false;  
+       
+//если x пустой то кидаем в него значение введеное
         if (isOperandX == false) {
             operandX = Double.parseDouble(jTextField1.getText());
             //теперь у нас есть первое значение
@@ -512,8 +507,6 @@ char number='3';
             //копируем то что внизу наверх
             copyValueToTextField2(op);
             //проверим если до этого было '=' то заменяем на '+'
-           
-
             jTextField1.setText(Double.toString(calc.toCalculate(operator, operandX, operandY)));
             operandX = calc.toCalculate(operator, operandX, operandY);
             lastSymbolWasOperator = true;
@@ -536,12 +529,17 @@ char op='+';
         String tempStr = jTextField1.getText();
         char ch;
         if (!tempStr.isEmpty()) {
+            //проверим если в строке нет .  то ставим если есть то н еставим..
+            if(tempStr.indexOf('.')!=-1){
+                return;
+            }
             ch = tempStr.charAt(tempStr.length() - 1);
+            //punctflag = true;//если у нас не путое поле text1 то мы е ставим точку
 
         } else {
             return;
         }
-
+     //   if()
         if ((ch != '+') && (ch != '-') && (ch != '*') && (ch != '/')) {
             if (punctflag == false) {
                 jTextField1.setText(jTextField1.getText() + '.');
@@ -564,6 +562,10 @@ char op='+';
         jTextField2.setText("");
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jBtn7KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBtn7KeyPressed
+        System.out.println("sgasdgasg");
+    }//GEN-LAST:event_jBtn7KeyPressed
 
     /**
      * @param args the command line arguments
